@@ -1,5 +1,6 @@
 <?php
 function school_register_custom_post_types() {
+    //students Post type
     $labels = array(
         'name'                  => _x( 'Students', 'post type general name', 'FWD school' ),
         'singular_name'         => _x( 'student', 'post type singular name', 'FWD school' ),
@@ -39,6 +40,7 @@ function school_register_custom_post_types() {
 
     register_post_type( 'school-student', $args );
 
+    //staff post type
     $labels = array(
             'name'                  => _x( 'Staff', 'post type general name', 'FWD school' ),
             'singular_name'         => _x( 'staff', 'post type singular name', 'FWD school' ),
@@ -84,6 +86,7 @@ add_action( 'init', 'school_register_custom_post_types' );
 
 function school_register_taxonomies() {
 
+    // student catgeory taxonomy
     $labels = array(
         'name'                  => _x( 'Student categories', 'taxonomy general name', 'FWD school' ),
         'singular_name'         => _x( 'Student category', 'taxonomy singular name', 'FWD school' ),
@@ -116,7 +119,7 @@ function school_register_taxonomies() {
         'query_var'         => true,
         'rewrite'           => array( 'slug' => 'student-categories' ),
     );
-register_taxonomy( 'school-student-category', array( 'school-student' ), $args );
+    register_taxonomy( 'school-student-category', array( 'school-student' ), $args );
 
 
 }
