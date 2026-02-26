@@ -1,26 +1,30 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
-	'copyright-date' => array(
+	'school-email' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'school-blocks/copyright-date',
+		'name' => 'school-blocks/school-email',
 		'version' => '0.1.0',
-		'title' => 'School Blocks',
+		'title' => 'School Email',
 		'category' => 'text',
-		'icon' => 'calendar',
-		'description' => 'Custom blocks for the school site',
+		'icon' => 'email-alt',
+		'description' => 'custom block to display email links',
 		'example' => array(
 			
 		),
 		'supports' => array(
 			'html' => false
 		),
-		'textdomain' => 'school-blocks',
+		'attributes' => array(
+			'schoolEmail' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'textdomain' => 'school-email',
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
-		'render' => 'file:./render.php',
-		'viewScript' => 'file:./view.js'
+		'render' => 'file:./render.php'
 	)
 );
