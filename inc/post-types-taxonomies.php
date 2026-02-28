@@ -34,7 +34,21 @@ function school_register_custom_post_types() {
         'menu_position'      => 7,
         'menu_icon'          => 'dashicons-heart',
         'supports'           => array( 'title', 'editor' ),
-        'template'           => array( array( 'core/pullquote' ) ),
+        'template' => array(
+                array(
+                    'core/paragraph',
+                    array(
+                        'placeholder' => 'Write a short biography...',
+                    ),
+                ),
+                array(
+                    'core/button',
+                    array(
+                        'placeholder' => 'Portfolio link...',
+                    ),
+                ),
+            ),
+        
         'template_lock'      => 'all'
     );
 
