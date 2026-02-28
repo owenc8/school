@@ -33,7 +33,7 @@ function school_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 7,
         'menu_icon'          => 'dashicons-heart',
-        'supports'           => array( 'title', 'editor' ),
+        'supports'           => array( 'title', 'editor','thumbnail' ),
         'template' => array(
                 array(
                     'core/paragraph',
