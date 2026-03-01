@@ -19,13 +19,12 @@ function school_enqueues() {
 		'all'
 	);
 
-	// wp_enqueue_script(
-    // 'mindset-scroll-to-top', 
-    // get_theme_file_uri( 'assets/js/scroll-to-top.js' ), 
-    // array(), 
-    // wp_get_theme()->get( 'Version' ), 
-    // array( 'strategy' => 'defer' ) 
-	// );
+	add_filter( 'enter_title_here', function( $title, $post ) {
+    if ( 'student' === $post->post_type ) {
+        return 'Add student name';
+    }
+    return $title;
+	}, 10, 2 );
 
 
 
