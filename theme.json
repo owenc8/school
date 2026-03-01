@@ -153,7 +153,9 @@
       },
       "heading": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--noto-sans)"
+          "fontFamily": "var(--wp--preset--font-family--noto-sans)",
+          "fontStyle": "normal",
+          "fontWeight": "400"
         }
       },
       "link": {
@@ -177,17 +179,24 @@
     },
     "typography": {
       "fontFamily": "var(--wp--preset--font-family--noto-sans)",
-      "fontSize": "2rem"
+      "fontSize": "var(--wp--preset--font-size--small)"
     }
   },
   "templateParts": [
     {
       "area": "header",
-      "name": "header"
+      "name": "header",
+      "title": "Header"
     },
     {
       "area": "footer",
-      "name": "footer"
+      "name": "footer",
+      "title": "Footer"
+    },
+    {
+      "area": "uncategorized",
+      "name": "utility-bar",
+      "title": "Utility Bar"
     }
   ]
 }
