@@ -1,9 +1,7 @@
 <!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
 
 <!-- wp:group {"tagName":"main","metadata":{"name":"main"},"className":"site-main","layout":{"type":"constrained"}} -->
-<main class="wp-block-group site-main"><!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="wp-block-heading has-text-align-center">News</h1>
-<!-- /wp:heading -->
+<main class="wp-block-group site-main"><!-- wp:query-title {"type":"archive","textAlign":"center"} /-->
 
 <!-- wp:query {"queryId":0,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"taxQuery":null,"parents":[]},"layout":{"type":"default"}} -->
 <div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"default"}} -->
@@ -31,7 +29,7 @@
 <!-- /wp:post-template -->
 
 <!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:query-pagination {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"},":hover":{"color":{"text":"var:preset|color|hover"}}}}},"fontSize":"small","fontFamily":"noto-serif","layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-group"><!-- wp:query-pagination {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"},":hover":{"color":{"text":"var:preset|color|hover"}}}}},"fontSize":"small","fontFamily":"noto-serif","layout":{"type":"flex","justifyContent":"left"}} -->
 <!-- wp:query-pagination-previous /-->
 
 <!-- wp:query-pagination-numbers /-->
