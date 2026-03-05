@@ -56,3 +56,15 @@ add_filter( 'image_size_names_choose', 'fwd_school_add_custom_image_sizes' );
 require get_theme_file_path() . '/school-blocks/school-blocks.php';
 //custom types and taxonomies
 require get_template_directory() . '/inc/post-types-taxonomies.php';
+
+add_filter( 'enter_title_here', 'change_cpt_title_placeholder', 20, 2 );
+function change_cpt_title_placeholder( $title, $post ) {
+    if ( 'school-student' == $post->post_type ) {
+        $my_title = 'Add student name...';
+        return $my_title;
+    }elseif('school-staff' == $post->post_type){
+		 $my_title = 'Add staff name...';
+        return $my_title;
+	}
+    return $title;
+}
