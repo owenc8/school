@@ -29,7 +29,7 @@ function school_register_custom_post_types() {
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'students' ),
         'capability_type'    => 'post',
-        'has_archive'        => false,
+        'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 7,
         'menu_icon'          => 'dashicons-heart',
@@ -87,8 +87,21 @@ function school_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 7,
         'menu_icon'          => 'dashicons-universal-access',
-        'supports'           => array( 'title', 'editor' ),
-        'template'           => array( array( 'core/pullquote' ) ),
+        'supports'           => array( 'title', 'editor','thumbnail' ),
+        'template' => array(
+                array(
+                    'core/paragraph',
+                    array(
+                        'placeholder' => 'Staff Title',
+                    ),
+                ),
+                array(
+                    'school-blocks/school-email',
+                    array(
+                        'placeholder' => 'Staff Email',
+                    ),
+                ),
+            ),
         'template_lock'      => 'all'
     );
 
@@ -100,7 +113,7 @@ add_action( 'init', 'school_register_custom_post_types' );
 
 function school_register_taxonomies() {
 
-    // student catgeory taxonomy
+    // student category taxonomy
     $labels = array(
         'name'                  => _x( 'Student categories', 'taxonomy general name', 'FWD school' ),
         'singular_name'         => _x( 'Student category', 'taxonomy singular name', 'FWD school' ),
@@ -134,6 +147,41 @@ function school_register_taxonomies() {
         'rewrite'           => array( 'slug' => 'student-categories' ),
     );
     register_taxonomy( 'school-student-category', array( 'school-student' ), $args );
+
+     // staff category taxonomy
+    $labels = array(
+        'name'                  => _x( 'Staff categories', 'taxonomy general name', 'FWD school' ),
+        'singular_name'         => _x( 'Staff category', 'taxonomy singular name', 'FWD school' ),
+        'search_items'          => __( 'Search Staff categories', 'FWD school' ),
+        'all_items'             => __( 'All Staff category', 'FWD school' ),
+        'parent_item'           => __( 'Parent Staff category', 'FWD school' ),
+        'parent_item_colon'     => __( 'Parent Staff category:', 'FWD school' ),
+        'edit_item'             => __( 'Edit Staff category', 'FWD school' ),
+        'view_item'             => __( 'View Staff category', 'FWD school' ),
+        'update_item'           => __( 'Update Staff category', 'FWD school' ),
+        'add_new_item'          => __( 'Add New Staff category', 'FWD school' ),
+        'new_item_name'         => __( 'New Staff category Name', 'FWD school' ),
+        'template_name'         => __( 'Staff category Archives', 'FWD school' ),
+        'menu_name'             => __( 'Staff category', 'FWD school' ),
+        'not_found'             => __( 'No Staff categories found.', 'FWD school' ),
+        'no_terms'              => __( 'No Staff categories', 'FWD school' ),
+        'items_list_navigation' => __( 'Staff categories list navigation', 'FWD school' ),
+        'items_list'            => __( 'Staff categories list', 'FWD school' ),
+        'item_link'             => __( 'Staff category Link', 'FWD school' ),
+        'item_link_description' => __( 'A link to a Staff category.', 'FWD school' ),
+        );
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_in_menu'      => true,
+        'show_in_nav_menu'  => true,
+        'show_in_rest'      => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'staff-categories' ),
+    );
+    register_taxonomy( 'school-staff-category', array( 'school-staff' ), $args );
 
 
 }
