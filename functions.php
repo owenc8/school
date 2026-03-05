@@ -32,26 +32,26 @@ function school_enqueues() {
 }
 add_action( 'wp_enqueue_scripts', 'school_enqueues' );
 
-function mindset_setup() {
+function school_setup() {
     //load style.css file in block editor
 	add_editor_style( get_stylesheet_uri() );
 
 }  
-add_action( 'after_setup_theme', 'mindset_setup' );
+add_action( 'after_setup_theme', 'school_setup' );
 
 
 
 
-// function mindset_add_custom_image_sizes( $size_names ) {
-// 	$new_sizes = array(
-// 		'400x500' => __( '400x500', 'mindset-theme' ),
-// 		'200x250' => __( '200x250', 'mindset-theme' ),
-//         '400x200' => __( '400x200', 'mindset-theme' ),
-// 		'800x400' => __( '800x400', 'mindset-theme' ),
-// 	);
-// 	return array_merge( $size_names, $new_sizes );
-// }
-// add_filter( 'image_size_names_choose', 'mindset_add_custom_image_sizes' );
+function fwd_school_add_custom_image_sizes( $size_names ) {
+	$new_sizes = array(
+		'400x500' => __( '400x500', 'FWD school' ),
+		'200x250' => __( '200x250', 'FWD school' ),
+        '400x200' => __( '400x200', 'FWD school' ),
+		'800x400' => __( '800x400', 'FWD school' ),
+	);
+	return array_merge( $size_names, $new_sizes );
+}
+add_filter( 'image_size_names_choose', 'fwd_school_add_custom_image_sizes' );
 //custom blocks 
 require get_theme_file_path() . '/school-blocks/school-blocks.php';
 //custom types and taxonomies
