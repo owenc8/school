@@ -57,6 +57,7 @@ require get_theme_file_path() . '/school-blocks/school-blocks.php';
 //custom types and taxonomies
 require get_template_directory() . '/inc/post-types-taxonomies.php';
 
+//placeholder changed for student and staff
 add_filter( 'enter_title_here', 'change_cpt_title_placeholder', 20, 2 );
 function change_cpt_title_placeholder( $title, $post ) {
     if ( 'school-student' == $post->post_type ) {
