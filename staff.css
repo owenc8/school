@@ -8,7 +8,9 @@
 .staff-container{
     box-shadow: 6px 6px 0px -3px var(--wp--preset--color--base), 6px 6px var(--wp--preset--color--accent);
 }
-.archive-header{
+
+/* H1 code for underline */
+/* .archive-header{
     padding-bottom: 1rem;
     margin: 0 1rem;
     font-size: 2.25rem;
@@ -25,7 +27,7 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--wp--preset--color--accent);
-}
+} */
 
 
 .staff-image img{
