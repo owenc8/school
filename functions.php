@@ -19,15 +19,6 @@ function school_enqueues() {
 		'all'
 	);
 
-	//staff css file
-	wp_enqueue_style(
-        'staff-page-style',                          
-        get_template_directory_uri() . '/staff.css', 
-        array('school-style'),                            
-        wp_get_theme()->get( 'Version' ),                              
-        'all'                                      
-    );
-
 	add_filter( 'enter_title_here', function( $title, $post ) {
     if ( 'student' === $post->post_type ) {
         return 'Add student name';
@@ -36,7 +27,7 @@ function school_enqueues() {
 	}, 10, 2 );
 
 // load front-page(id) light gallery script and style enqueues 
-if (is_page(68)) {
+	if (is_page(68)) {
 
 		wp_enqueue_style(
 		'lightgallery-css',
@@ -60,7 +51,21 @@ if (is_page(68)) {
 		array( 'strategy' => 'defer' )
 		);
 	}
+
+	if (is_page(123)) {
+		//staff css file
+		wp_enqueue_style(
+			'staff-page-style',                          
+			get_template_directory_uri() . '/staff.css', 
+			array('school-style'),                            
+			wp_get_theme()->get( 'Version' ),                              
+			'all'                                      
+		);
+		
+	}
 }
+
+
 
 add_action( 'wp_enqueue_scripts', 'school_enqueues' );
 

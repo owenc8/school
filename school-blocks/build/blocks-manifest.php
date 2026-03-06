@@ -1,6 +1,32 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
+	'custom-animation-wrapper' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'school-blocks/custom-animation-wrapper',
+		'version' => '0.1.0',
+		'title' => 'Custom Animation Wrapper',
+		'category' => 'widgets',
+		'icon' => 'slides',
+		'description' => 'block wrapper for animate on scroll',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'aosAnimation' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'textdomain' => 'custom-animation-wrapper',
+		'editorScript' => 'file:./index.js',
+		'viewStyle' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'school-email' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
