@@ -10,7 +10,7 @@ function school_enqueues() {
 	array(), 
 	'12.1.0'
     );
-
+	//main css file
 	wp_enqueue_style( 
 		'school-style',
 		get_stylesheet_uri(),
@@ -18,6 +18,15 @@ function school_enqueues() {
 		wp_get_theme()->get( 'Version' ),
 		'all'
 	);
+
+	//staff css file
+	wp_enqueue_style(
+        'staff-page-style',                          
+        get_template_directory_uri() . '/staff.css', 
+        array('school-style'),                            
+        wp_get_theme()->get( 'Version' ),                              
+        'all'                                      
+    );
 
 	add_filter( 'enter_title_here', function( $title, $post ) {
     if ( 'student' === $post->post_type ) {

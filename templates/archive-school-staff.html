@@ -1,37 +1,45 @@
 <!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
 
 <!-- wp:group {"tagName":"main","metadata":{"name":"main"},"className":"site-main","layout":{"type":"constrained"}} -->
-<main class="wp-block-group site-main"><!-- wp:query-title {"type":"archive","textAlign":"center","showPrefix":false} /-->
+<main class="wp-block-group site-main"><!-- wp:query-title {"type":"archive","textAlign":"center","showPrefix":false,"className":"archive-header"} /-->
 
 <!-- wp:paragraph -->
 <p>Our experienced faculty brings years of hands-on experience in web development and design, ensuring that our students are equipped with cutting-edge skills and knowledge. From user experience designers to back-end engineers, our team covers every facet of web development and design to guide you through your learning journey. The administrative staff is here to provide seamless support, helping you focus on what matters most—mastering the art of coding and creating exceptional digital experiences. Explore below to meet the people who make us a thriving hub for innovation and growth!</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Faculty</h2>
+<!-- wp:heading {"style":{"spacing":{"margin":{"top":"var:preset|spacing|60"}}},"fontSize":"x-large"} -->
+<h2 class="wp-block-heading has-x-large-font-size" style="margin-top:var(--wp--preset--spacing--60)">Faculty</h2>
 <!-- /wp:heading -->
 
 <!-- wp:query {"queryId":14,"query":{"perPage":10,"pages":0,"offset":0,"postType":"school-staff","order":"asc","orderBy":"title","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":{"school-staff-category":[10]},"parents":[],"format":[]}} -->
 <div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"grid","columnCount":2}} -->
-<!-- wp:post-featured-image {"aspectRatio":"1"} /-->
+<!-- wp:group {"tagName":"article","className":"staff-container","layout":{"type":"constrained"}} -->
+<article class="wp-block-group staff-container"><!-- wp:post-featured-image {"aspectRatio":"1","className":"staff-image"} /-->
 
-<!-- wp:post-title /-->
+<!-- wp:group {"className":"staff-content","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group staff-content" style="padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)"><!-- wp:post-title /-->
 
-<!-- wp:post-content /-->
+<!-- wp:post-content /--></div>
+<!-- /wp:group --></article>
+<!-- /wp:group -->
 <!-- /wp:post-template --></div>
 <!-- /wp:query -->
 
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Administrative</h2>
+<!-- wp:heading {"style":{"spacing":{"margin":{"top":"var:preset|spacing|60"}}},"fontSize":"x-large"} -->
+<h2 class="wp-block-heading has-x-large-font-size" style="margin-top:var(--wp--preset--spacing--60)">Administrative</h2>
 <!-- /wp:heading -->
 
 <!-- wp:query {"queryId":14,"query":{"perPage":10,"pages":0,"offset":0,"postType":"school-staff","order":"asc","orderBy":"title","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":{"school-staff-category":[11]},"parents":[],"format":[]}} -->
 <div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"grid","columnCount":2}} -->
-<!-- wp:post-featured-image {"aspectRatio":"1"} /-->
+<!-- wp:group {"tagName":"article","className":"staff-container","layout":{"type":"constrained"}} -->
+<article class="wp-block-group staff-container"><!-- wp:post-featured-image {"aspectRatio":"1","className":"staff-image"} /-->
 
-<!-- wp:post-title /-->
+<!-- wp:group {"className":"staff-content","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group staff-content" style="padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)"><!-- wp:post-title /-->
 
-<!-- wp:post-content /-->
+<!-- wp:post-content /--></div>
+<!-- /wp:group --></article>
+<!-- /wp:group -->
 <!-- /wp:post-template --></div>
 <!-- /wp:query --></main>
 <!-- /wp:group -->
