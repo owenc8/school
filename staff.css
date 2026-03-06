@@ -1,0 +1,52 @@
+
+.staff-container, .staff-container a
+{
+    background: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--base);
+}
+
+.staff-container{
+    box-shadow: 6px 6px 0px -3px var(--wp--preset--color--base), 6px 6px var(--wp--preset--color--accent);
+}
+
+/* H1 code for underline */
+/* .archive-header{
+    padding-bottom: 1rem;
+    margin: 0 1rem;
+    font-size: 2.25rem;
+}
+.archive-header {
+    position: relative;
+}
+.archive-header::after{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--wp--preset--color--accent);
+} */
+
+
+.staff-image img{
+    border-radius: 50%;
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+.staff-container .staff-content h2{
+    font-size: 1.5rem;
+}
+.staff-container .staff-content {
+    margin-left: 1rem;
+}
+
+
+.staff-content, .entry-content, .entry-content div {
+    margin-top: 0;
+}
+
+.entry-content p{
+    font-style: italic;
+}
