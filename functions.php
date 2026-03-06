@@ -49,7 +49,14 @@ function school_setup() {
 add_action( 'after_setup_theme', 'school_setup' );
 
 
-
+function fwd_school_register_image_sizes() {
+    add_image_size( '400x500', 400, 500, true );
+    add_image_size( '200x250', 200, 250, true );
+    add_image_size( '400x200', 400, 200, true );
+    add_image_size( '800x400', 800, 400, true );
+	add_image_size( '1080x1350', 1080, 1350, true );
+}
+add_action( 'after_setup_theme', 'fwd_school_register_image_sizes' );
 
 function fwd_school_add_custom_image_sizes( $size_names ) {
 	$new_sizes = array(
@@ -57,6 +64,7 @@ function fwd_school_add_custom_image_sizes( $size_names ) {
 		'200x250' => __( '200x250', 'FWD school' ),
         '400x200' => __( '400x200', 'FWD school' ),
 		'800x400' => __( '800x400', 'FWD school' ),
+		'1080x1350' => __('1080x1350', 'FWD school')
 	);
 	return array_merge( $size_names, $new_sizes );
 }
