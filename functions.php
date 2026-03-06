@@ -26,10 +26,33 @@ function school_enqueues() {
     return $title;
 	}, 10, 2 );
 
+// load front-page(id) light gallery script and style enqueues 
+if (is_page(68)) {
 
+		wp_enqueue_style(
+		'lightgallery-css',
+		get_theme_file_uri('assets/css/lightgallery-bundle.css'),
+		array(),
+		wp_get_theme()->get('Version')
+		);
 
-	
+		wp_enqueue_script(
+		'lightgallery-js', 
+		get_theme_file_uri( 'assets/js/lightgallery/lightgallery.umd.js' ), 
+		array(),
+		wp_get_theme()->get( 'Version' ), 
+		);
+
+		wp_enqueue_script(
+		'light-gallery-init',
+		get_theme_file_uri('assets/js/lightgallery/light-gallery-init.js'),
+		array('lightgallery-js'),
+		wp_get_theme()->get('Version'),
+		array( 'strategy' => 'defer' )
+		);
+	}
 }
+
 add_action( 'wp_enqueue_scripts', 'school_enqueues' );
 
 function school_setup() {
