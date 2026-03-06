@@ -26,8 +26,15 @@ function school_enqueues() {
     return $title;
 	}, 10, 2 );
 
-
-
+// front-page light gallery enqueues 
+if (is_page(68)) {
+		wp_enqueue_script(
+		'lightgallery.umd.js', 
+		get_theme_file_uri( 'assets/js/lightgallery/lightgallery.umd.js' ), 
+		array(),
+		wp_get_theme()->get( 'Version' ), 
+		);
+	}
 	
 }
 add_action( 'wp_enqueue_scripts', 'school_enqueues' );
