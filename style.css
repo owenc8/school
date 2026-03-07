@@ -16,8 +16,7 @@ Update URI: false
 */
 
 /* H1 code for underline */
-h1,
-.wp-block-post-title {
+h1 {
   padding-bottom: 1rem;
   font-size: 2.25rem;
   position: relative;
