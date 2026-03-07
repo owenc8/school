@@ -47,3 +47,7 @@
 .entry-content div {
   margin-top: 0;
 }
+
+.entry-content p {
+  font-style: italic;
+}
