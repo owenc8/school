@@ -30,6 +30,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							{ label: __( 'Fade Down', 'custom-animation-wrapper' ), value: 'fade-down' },
 							{ label: __( 'Fade Left', 'custom-animation-wrapper' ), value: 'fade-left' },
 							{ label: __( 'Fade Right', 'custom-animation-wrapper' ), value: 'fade-right' },
+							{ label: __( 'Zoom In', 'custom-animation-wrapper' ), value: 'zoom-in' },
 						] }
 						onChange={ ( value ) => setAttributes( { aosAnimation: value } ) }
 					/>
