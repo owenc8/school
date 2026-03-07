@@ -17,13 +17,9 @@ Update URI: false
 
 /* H1 code for underline */
 h1,
-wp-block-post-title {
+.wp-block-post-title {
   padding-bottom: 1rem;
-  margin: 0 1rem;
   font-size: 2.25rem;
-}
-h1,
-wp-block-post-title {
   position: relative;
 }
 
@@ -37,4 +33,38 @@ h1::after {
   transform: translateX(-50%);
   background-color: var(--wp--preset--color--accent);
   margin-top: 0.25rem;
+}
+
+/* Mobile Styling */
+
+@media (max-width: 37.5rem) {
+  /* Apply Now button */
+  .wp-block-navigation__responsive-container.has-modal-open
+    .apply-nav-link
+    .wp-block-navigation-item__content {
+    background-color: var(--wp--preset--color--accent);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+  }
+
+  /* utility search bar */
+  .utility-bar-row .is-layout-flex {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .utility-bar-search .is-layout-flex {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* Apply Now - Nav Link Styling - Desktop */
+
+.apply-nav-link .wp-block-navigation-item__content {
+  background: var(--wp--preset--color--accent);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
 }
