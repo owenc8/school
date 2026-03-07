@@ -40,7 +40,7 @@ function school_enqueues() {
 		'lightgallery-js', 
 		get_theme_file_uri( 'assets/js/lightgallery/lightgallery.umd.js' ), 
 		array(),
-		wp_get_theme()->get( 'Version' ) 
+		wp_get_theme()->get( 'Version' ), 
 		);
 
 		wp_enqueue_script(
@@ -52,6 +52,7 @@ function school_enqueues() {
 		);
 	}
 
+	if (is_page(123)) {
 		//staff css file
 		wp_enqueue_style(
 			'staff-page-style',                          
@@ -62,7 +63,7 @@ function school_enqueues() {
 		);
 		
 	}
-
+}
 
 
 
