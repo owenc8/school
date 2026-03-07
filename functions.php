@@ -40,7 +40,7 @@ function school_enqueues() {
 		'lightgallery-js', 
 		get_theme_file_uri( 'assets/js/lightgallery/lightgallery.umd.js' ), 
 		array(),
-		wp_get_theme()->get( 'Version' ), 
+		wp_get_theme()->get( 'Version' )
 		);
 
 		wp_enqueue_script(
