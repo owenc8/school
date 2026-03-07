@@ -52,11 +52,11 @@ function school_enqueues() {
 		);
 	}
 
-	if (is_page(123)) {
+	if ( is_post_type_archive( 'school-staff' ) || is_page( 'staff' ) )  {
 		//staff css file
 		wp_enqueue_style(
 			'staff-page-style',                          
-			get_template_directory_uri() . '/staff.css', 
+			get_theme_file_uri( 'staff.css' ), 
 			array('school-style'),                            
 			wp_get_theme()->get( 'Version' ),                              
 			'all'                                      
