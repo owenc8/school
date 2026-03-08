@@ -10,25 +10,6 @@
     6px 6px var(--wp--preset--color--accent);
 }
 
-/* H1 code for underline */
-/* .archive-header{
-    padding-bottom: 1rem;
-    margin: 0 1rem;
-    font-size: 2.25rem;
-}
-.archive-header {
-    position: relative;
-}
-.archive-header::after{
-    content: '';
-    position: absolute;
-    display: block;
-    height: 2px;
-    width: 5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--wp--preset--color--accent);
-} */
 
 .staff-image img {
   border-radius: 50%;
@@ -46,8 +27,4 @@
 .entry-content,
 .entry-content div {
   margin-top: 0;
-}
-
-.entry-content p {
-  font-style: italic;
 }
