@@ -1,11 +1,9 @@
-<!-- wp:group {"style":{"position":{"type":"sticky","top":"0px"}},"backgroundColor":"primary","layout":{"type":"default"}} -->
-<div class="wp-block-group has-primary-background-color has-background"><!-- wp:template-part {"slug":"header","tagName":"header","align":"center","className":"site-header"} /--></div>
+<!-- wp:group {"style":{"position":{"type":"sticky","top":"0px"}},"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /--></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"tagName":"main","metadata":{"name":"main"},"className":"site-main","layout":{"type":"constrained"}} -->
-<main class="wp-block-group site-main"><!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="wp-block-heading has-text-align-center">News</h1>
-<!-- /wp:heading -->
+<main class="wp-block-group site-main"><!-- wp:query-title {"type":"search","textAlign":"center"} /-->
 
 <!-- wp:query {"queryId":0,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"taxQuery":null,"parents":[]},"layout":{"type":"default"}} -->
 <div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"default"}} -->
@@ -32,6 +30,12 @@
 <!-- /wp:group -->
 <!-- /wp:post-template -->
 
+<!-- wp:query-no-results -->
+<!-- wp:paragraph {"placeholder":"Add text or blocks that will display when the query returns no results."} -->
+<p>Sorry, we couldn’t find any results.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results -->
+
 <!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:query-pagination {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"},":hover":{"color":{"text":"var:preset|color|hover"}}}}},"fontSize":"small","fontFamily":"noto-serif","layout":{"type":"flex","justifyContent":"center"}} -->
 <!-- wp:query-pagination-previous /-->
@@ -43,7 +47,7 @@
 <!-- /wp:group --></div>
 <!-- /wp:query -->
 
-<!-- wp:template-part {"slug":"utility-bar"} /--></main>
+<!-- wp:template-part {"slug":"utility-bar-search"} /--></main>
 <!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->

@@ -1,0 +1,30 @@
+.staff-container,
+.staff-container a {
+  background: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--base);
+}
+
+.staff-container {
+  box-shadow:
+    6px 6px 0px -3px var(--wp--preset--color--base),
+    6px 6px var(--wp--preset--color--accent);
+}
+
+
+.staff-image img {
+  border-radius: 50%;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.staff-container .staff-content h2 {
+  font-size: 1.5rem;
+}
+.staff-container .staff-content {
+  margin-left: 1rem;
+}
+
+.staff-content,
+.entry-content,
+.entry-content div {
+  margin-top: 0;
+}
