@@ -67,3 +67,11 @@ h1::after {
   padding: 0.6rem 1.2rem;
   border-radius: 25px;
 }
+.student-container{
+    flex-direction: column;
+  }
+@media(min-width: 600px){
+  .student-container{
+      flex-direction: row;
+  }
+}
