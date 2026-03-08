@@ -52,7 +52,7 @@ function school_enqueues() {
 		);
 	}
 
-	if ( is_post_type_archive( 'school-staff' ) || is_page( 'staff' ) )  {
+	if ( is_page( 'staff-members' ) )  {
 		//staff css file
 		wp_enqueue_style(
 			'staff-page-style',                          
